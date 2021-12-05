@@ -1,0 +1,25 @@
+From 5153e2e725afb42450c3d27670979b2a1d7b9e29 Mon Sep 17 00:00:00 2001
+From: Cappy Ishihara <cappy@cappuchino.xyz>
+Date: Sun, 5 Dec 2021 14:11:09 +0700
+Subject: [PATCH] change default wallpaper
+
+---
+ settings-daemon/theme/thememanager.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/settings-daemon/theme/thememanager.cpp b/settings-daemon/theme/thememanager.cpp
+index d412819..a749da3 100644
+--- a/settings-daemon/theme/thememanager.cpp
++++ b/settings-daemon/theme/thememanager.cpp
+@@ -68,7 +68,7 @@ ThemeManager::ThemeManager(QObject *parent)
+     // init value
+     m_isDarkMode = m_settings->value("DarkMode", false).toBool();
+     m_darkModeDimsWallpaer = m_settings->value("DarkModeDimsWallpaer", false).toBool();
+-    m_wallpaperPath = m_settings->value("Wallpaper", "/usr/share/backgrounds/cutefishos/default.jpg").toString();
++    m_wallpaperPath = m_settings->value("Wallpaper", "/usr/share/backgrounds/ultramarine-linux/default/default.jpg").toString();
+     m_accentColor = m_settings->value("AccentColor", 0).toInt();
+     m_backgroundType = m_settings->value("BackgroundType", 0).toInt();
+     m_backgroundColor = m_settings->value("BackgroundColor", "#2B8ADA").toString();
+-- 
+2.33.1
+

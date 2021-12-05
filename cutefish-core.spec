@@ -5,7 +5,7 @@
 %define component_name core
 
 Name: cutefish-%{component_name}
-Version: 0.6
+Version: 0.5
 Release: 1%{?dist}
 License: GPLv3
 Summary: System components, backend, and session files for Cutefish Desktop
@@ -25,6 +25,7 @@ Requires: pulseaudio-daemon
 Requires: fishui
 
 Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
+Patch0: 0001-change-default-wallpaper.patch
 
 %description
 System components, backend, and session files for the Cutefish Desktop
