@@ -3,7 +3,7 @@
 %define _disable_source_fetch 0
 
 %define component_name sddm-theme
-%define git_refspec 994e1c68746876b370dfc17b96c10266f47c5a67
+%define git_refspec d3722b62c5b87b8bb88a7e2d75dbdefaadc7d1a2
 %define git_refspec_short %(echo %{git_refspec} | cut -c -7)
 
 Name: %{component_name}-cutefish
@@ -18,7 +18,7 @@ Requires: libcutefish >= 0.2git.20210818.4caad74
 Requires: fishui
 
 Source0: https://github.com/cutefishos/%{component_name}/tarball/%{git_refspec}#/%{component_name}-%{git_refspec}.tar.gz
-
+Patch0: 0001-default-background.patch
 %description
 SDDM Theme for Cutefish
 

@@ -1,0 +1,25 @@
+From c2c5be902fc4672f7d20cb3f79f1c319c948cdc9 Mon Sep 17 00:00:00 2001
+From: Cappy Ishihara <cappy@cappuchino.xyz>
+Date: Sun, 5 Dec 2021 14:58:40 +0700
+Subject: [PATCH] default background
+
+---
+ Main.qml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Main.qml b/Main.qml
+index 73f76e5..cad9d94 100644
+--- a/Main.qml
++++ b/Main.qml
+@@ -43,7 +43,7 @@ Item {
+     Image {
+         id: wallpaperImage
+         anchors.fill: parent
+-        source: "file://" + "/usr/share/backgrounds/cutefishos/default.jpg"
++        source: "file://" + "/usr/share/backgrounds/ultramarine-linux/default/default.jpg"
+         sourceSize: Qt.size(width * Screen.devicePixelRatio,
+                             height * Screen.devicePixelRatio)
+         fillMode: Image.PreserveAspectCrop
+-- 
+2.33.1
+
