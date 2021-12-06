@@ -20,12 +20,15 @@ BuildRequires: pulseaudio-libs-devel
 BuildRequires: qt5-qtbase-devel qt5-qtx11extras-devel qt5-qttools-devel qt5-qtdeclarative-devel qt5-qtquickcontrols2-devel
 BuildRequires: kf5-kwindowsystem-devel
 BuildRequires: fishui-devel
+BuildRequires: xorg-x11-drv-synaptics-devel
+BuildRequires: libX11-devel
+BuildRequires: kf5-kcoreaddons-devel
 
 Requires: pulseaudio-daemon
 Requires: fishui
 
 Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
-Patch0: 0001-change-default-wallpaper.patch
+Patch0: https://gitlab.ultramarine-linux.org/dist-pkgs/cutefish-desktop/-/raw/master/patches/cutefish-core/0001-change-default-wallpaper.patch
 
 %description
 System components, backend, and session files for the Cutefish Desktop
