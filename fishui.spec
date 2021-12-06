@@ -20,7 +20,7 @@ BuildRequires: qt5-qtx11extras-devel qt5-qtbase-private-devel qt5-qtquickcontrol
 BuildRequires: kf5-kwindowsystem-devel
 BuildRequires: libxcb-devel xcb-util-wm-devel
 
-Source0: https://github.com/cutefishos/%{name}/archive/refs/tags/%{version}.tar.gz
+Source0: https://github.com/cutefishos/%{name}/archive/refs/tags/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 #Source0: https://github.com/cutefishos/%%{name}/tarball/%%{git_refspec}#/%%{name}-%%{git_refspec}.tar.gz
 
 %description

@@ -22,12 +22,12 @@ BuildRequires: fishui-devel
 
 Requires: fishui
 
-Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
+Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 %define _patch0_refspec 15e346d0b964b42dbdd8804cf42489a389138993
-Patch0: 0000-use_all_backgrounds.patch
+Patch0: https://gitlab.ultramarine-linux.org/dist-pkgs/cutefish-desktop/-/raw/master/patches/cutefish-settings/0000-use_all_backgrounds.patch
 %define _patch1_refspec 2d90cbfdbe38a18c763309cc7a88f043e3dbb842
-Patch1: 0001-use_fedora_logo.patch
+Patch1: https://gitlab.ultramarine-linux.org/dist-pkgs/cutefish-desktop/-/raw/master/patches/cutefish-settings/0001-use_fedora_logo.patch
 
 %description
 The System Settings application for Cutefish Desktop

@@ -18,7 +18,7 @@ BuildRequires: cmake(Qt5Core) cmake(Qt5Widgets) cmake(Qt5DBus) cmake(Qt5QuickCon
 BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: qt5-qtbase-static qt5-qtbase-private-devel
 
-Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
+Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 %description
 Unify Qt application style of Cutefish Desktop
@@ -27,17 +27,11 @@ Unify Qt application style of Cutefish Desktop
 %setup -qn %{component_name}-%{version}
 
 %build
-%{set_build_flags}
-mkdir build
-pushd build
-cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
-make %{?_smp_mflags}
-popd
+%cmake
+%cmake_build -v
 
 %install
-pushd build
-%make_install
-popd
+%cmake_install
 
 %files
 %{_qt5pluginsdir}/platformthemes/libcutefishplatformtheme.so

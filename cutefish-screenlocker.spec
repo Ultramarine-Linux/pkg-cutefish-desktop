@@ -20,7 +20,7 @@ BuildRequires: pam-devel
 
 Provides: bundled(kcheckpass) = 5.22.4
 
-Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
+Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 #Source0: https://github.com/cutefishos/%%{component_name}/tarball/%%{git_refspec}#/%%{component_name}-%%{git_refspec}.tar.gz
 
 %description

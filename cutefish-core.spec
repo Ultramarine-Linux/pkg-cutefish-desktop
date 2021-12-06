@@ -6,7 +6,7 @@
 
 Name: cutefish-%{component_name}
 Version: 0.5
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPLv3
 Summary: System components, backend, and session files for Cutefish Desktop
 
@@ -23,11 +23,11 @@ BuildRequires: fishui-devel
 BuildRequires: xorg-x11-drv-synaptics-devel
 BuildRequires: libX11-devel
 BuildRequires: kf5-kcoreaddons-devel
-
+BuildRequires: xorg-x11-server-devel
 Requires: pulseaudio-daemon
 Requires: fishui
 
-Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
+Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 Patch0: https://gitlab.ultramarine-linux.org/dist-pkgs/cutefish-desktop/-/raw/master/patches/cutefish-core/0001-change-default-wallpaper.patch
 
 %description
@@ -35,6 +35,7 @@ System components, backend, and session files for the Cutefish Desktop
 
 %prep
 %setup -qn %{component_name}-%{version}
+%patch0 -p1
 
 %build
 %{set_build_flags}
@@ -63,7 +64,11 @@ popd
 %{_datadir}/cutefish-polkit-agent
 %{_datadir}/cutefish-settings-daemon
 %{_datadir}/cutefish-shutdown
-%{_datadir}/polkit-1/actions/org.cutefish.brightness.pkexec.policy
-%{_datadir}/polkit-1/actions/org.cutefish.cpufreq.pkexec.policy
 %{_datadir}/xsessions/cutefish-xsession.desktop
 %{_sysconfdir}/xdg/autostart/cutefish-polkit-agent.desktop
+%{_bindir}/cutefish-gmenuproxy
+%{_bindir}/cutefish-notificationd
+/usr/lib/systemd/user/cutefish-gmenuproxy.service
+%{_datadir}/cutefish-notificationd/
+%{_datadir}/polkit-1/actions/com.cutefish*
+%{_sysconfdir}/cutefish

@@ -18,7 +18,7 @@ BuildRequires: fishui-devel
 
 Requires: fishui
 
-Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
+Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 %description
 The status bar at the top displays the current status of the system, such as time, system tray, etc.

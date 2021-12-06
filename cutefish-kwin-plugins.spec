@@ -15,12 +15,13 @@ BuildRequires: cmake
 BuildRequires: extra-cmake-modules
 BuildRequires: qt5-qtbase-devel qt5-qtdeclarative-devel qt5-qtx11extras-devel cmake(Qt5UiTools)
 BuildRequires: kf5-kconfig-devel kf5-kguiaddons-devel kf5-kcoreaddons-devel kf5-kconfigwidgets-devel kf5-kwindowsystem-devel kf5-kwayland-devel
-BuildRequires: kdecoration-devel kwin-devel
+BuildRequires: kdecoration-devel
+BuildRequires: kwin-devel = 5.22.5 #Kwin 5.23 does not like the Cutefish rounded corners patch
 BuildRequires: libepoxy-devel
 
 Requires: kwin
 
-Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
+Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 %description
 Cutefish Desktop KWin Plugins
@@ -29,17 +30,11 @@ Cutefish Desktop KWin Plugins
 %setup -qn %{component_name}-%{version}
 
 %build
-%{set_build_flags}
-mkdir build
-pushd build
-cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
-make %{?_smp_mflags}
-popd
+%cmake
+%cmake_build -v
 
 %install
-pushd build
-%make_install
-popd
+%cmake_install
 
 %files
 %{_sysconfdir}/xdg/kglobalshortcutsrc

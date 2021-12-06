@@ -22,7 +22,7 @@ Requires: fishui
 # the qmltermwidget has been patched by Cutefish team
 Provides: bundled(qmltermwidget) = 0.2.0git.65e75bc+patched.e8b841f
 
-Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
+Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 #Source0: https://github.com/cutefishos/%%{component_name}/tarball/%%{git_refspec}#/%%{component_name}-%%{git_refspec}.tar.gz
 
 %description

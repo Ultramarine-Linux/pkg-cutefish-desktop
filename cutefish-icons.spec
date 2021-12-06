@@ -13,7 +13,7 @@ Summary: System default icon theme for Cutefish Desktop
 BuildRequires:  cmake make gcc gcc-c++
 Provides:       crule-icon-theme = 0.0.%{version}-%{release}
 
-Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
+Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 %description
 Crule, the system default icon theme for Cutefish Desktop, based on vinceliuice's whitesur

@@ -18,12 +18,13 @@ Requires: libcutefish >= 0.2git.20210818.4caad74
 Requires: fishui
 
 Source0: https://github.com/cutefishos/%{component_name}/tarball/%{git_refspec}#/%{component_name}-%{git_refspec}.tar.gz
-Patch0: 0001-default-background.patch
+Patch0: https://gitlab.ultramarine-linux.org/dist-pkgs/cutefish-desktop/-/raw/master/patches/sddm-theme-cutefish/0001-default-background.patch
 %description
 SDDM Theme for Cutefish
 
 %prep
 %setup -qn cutefishos-%{component_name}-%{git_refspec_short}
+%patch0 -p1
 
 %build
 

@@ -15,7 +15,7 @@ Summary: Cutefish Video Player
 
 BuildRequires: cmake
 BuildRequires: extra-cmake-modules
-BuildRequires: qt5-qtbase-devel qt5-qtquickcontrols2
+BuildRequires: qt5-qtbase-devel qt5-qtquickcontrols2-devel
 BuildRequires: kf5-kconfig-devel kf5-kcoreaddons-devel kf5-kfilemetadata-devel kf5-ki18n-devel kf5-kiconthemes-devel kf5-kio-devel kf5-kxmlgui-devel kf5-kdoctools-devel
 BuildRequires: plasma-breeze
 BuildRequires: mpv-libs-devel
@@ -25,7 +25,6 @@ Requires: qqc2-desktop-style
 Requires: kio-extras
 Requires: youtube-dl
 
-#Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
 Source0: https://github.com/cutefishos/%{component_name}/tarball/%{git_refspec}#/%{component_name}-%{git_refspec}.tar.gz
 Source1: https://github.com/cutefishos/%{component_name}/raw/%{git_refspec}/cutefish-videoplayer.desktop
 

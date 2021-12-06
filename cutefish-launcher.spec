@@ -14,7 +14,7 @@ BuildRequires: cmake
 BuildRequires: qt5-qtbase-devel qt5-qttools qt5-qttools-devel qt5-qtdeclarative-devel qt5-qtquickcontrols2-devel qt5-linguist qt5-qtx11extras-devel
 BuildRequires: kf5-kwindowsystem-devel
 
-Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
+Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 %description
 Cutefish Desktop's full-screen application launcher
@@ -23,17 +23,11 @@ Cutefish Desktop's full-screen application launcher
 %setup -qn %{component_name}-%{version}
 
 %build
-%{set_build_flags}
-mkdir build
-pushd build
-cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
-make %{?_smp_mflags}
-popd
+%cmake
+%cmake_build
 
 %install
-pushd build
-%make_install
-popd
+%cmake_install
 
 %files
 %{_bindir}/%{name}

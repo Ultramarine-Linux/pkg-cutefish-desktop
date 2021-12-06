@@ -16,7 +16,7 @@ BuildRequires: cmake make
 BuildRequires: qt5-qtbase-devel qt5-qtquickcontrols2-devel qt5-qtsensors-devel
 BuildRequires: kf5-networkmanager-qt-devel kf5-modemmanager-qt-devel kf5-bluez-qt-devel kf5-kio-devel libkscreen-qt5-devel
 
-Source0: https://github.com/cutefishos/%{name}/archive/refs/tags/%{version}.tar.gz
+Source0: https://github.com/cutefishos/%{name}/archive/refs/tags/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 #Source0: https://github.com/cutefishos/%%{name}/tarball/%%{git_refspec}#/%%{name}-%%{git_refspec}.tar.gz
 
 %description
