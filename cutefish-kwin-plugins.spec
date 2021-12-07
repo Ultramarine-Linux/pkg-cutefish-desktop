@@ -7,7 +7,7 @@
 
 Name: cutefish-%{component_name}
 Version: 0.5
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPLv3
 Summary: Some configurations and plugins of KWin for Cutefish Desktop
 
@@ -16,8 +16,9 @@ BuildRequires: extra-cmake-modules
 BuildRequires: qt5-qtbase-devel qt5-qtdeclarative-devel qt5-qtx11extras-devel cmake(Qt5UiTools)
 BuildRequires: kf5-kconfig-devel kf5-kguiaddons-devel kf5-kcoreaddons-devel kf5-kconfigwidgets-devel kf5-kwindowsystem-devel kf5-kwayland-devel
 BuildRequires: kdecoration-devel
-BuildRequires: kwin-devel = 5.22.5 #Kwin 5.23 does not like the Cutefish rounded corners patch
+BuildRequires: kwin-devel = 5.22.5
 BuildRequires: libepoxy-devel
+BuildRequires: xcb-util-devel
 
 Requires: kwin
 
