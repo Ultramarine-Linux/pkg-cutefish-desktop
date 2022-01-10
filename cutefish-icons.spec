@@ -5,7 +5,7 @@
 %define component_name icons
 
 Name: cutefish-%{component_name}
-Version: 0.5
+Version: 0.7
 Release: 1%{?dist}
 License: GPLv3
 Summary: System default icon theme for Cutefish Desktop
@@ -22,11 +22,12 @@ Crule, the system default icon theme for Cutefish Desktop, based on vinceliuice'
 %setup -qn %{component_name}-%{version}
 
 %build
-cmake .
-%make_build
+%cmake
+
+%cmake_build
 
 %install
-%make_install
+%cmake_install 
 
 %files
 %license LICENSE

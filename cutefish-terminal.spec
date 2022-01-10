@@ -7,7 +7,7 @@
 #%%define git_refspec_short %%(echo %%{git_refspec} | cut -c -7)
 
 Name: cutefish-%{component_name}
-Version: 0.5
+Version: 0.7
 #Version: 0.0.0git.%%(date +%Y%m%d).%%{git_refspec_short}
 Release: 1%{?dist}
 License: GPLv3
@@ -33,17 +33,11 @@ A terminal emulator for Cutefish
 #%%setup -qn cutefishos-%%{component_name}-%%{git_refspec_short}
 
 %build
-%{set_build_flags}
-mkdir build
-pushd build
-cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
-make %{?_smp_mflags}
-popd
+%cmake
+%cmake_build
 
 %install
-pushd build
-%make_install
-popd
+%cmake_install
 
 %files
 %{_bindir}/%{name}

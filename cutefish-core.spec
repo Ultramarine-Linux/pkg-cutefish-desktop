@@ -5,7 +5,7 @@
 %define component_name core
 
 Name: cutefish-%{component_name}
-Version: 0.5
+Version: 0.7
 Release: 2%{?dist}
 License: GPLv3
 Summary: System components, backend, and session files for Cutefish Desktop
@@ -13,9 +13,10 @@ Summary: System components, backend, and session files for Cutefish Desktop
 BuildRequires: cmake
 BuildRequires: extra-cmake-modules
 BuildRequires: polkit-devel polkit-qt5-1-devel libSM-devel
-BuildRequires: pkgconfig(xorg-libinput) 
+BuildRequires: pkgconfig(xorg-libinput)
 BuildRequires: libXcursor-devel
 BuildRequires: xcb-util-devel xcb-util-image-devel xcb-util-keysyms-devel libXtst-devel
+BuildRequires: libxcb-devel
 BuildRequires: pulseaudio-libs-devel
 BuildRequires: qt5-qtbase-devel qt5-qtx11extras-devel qt5-qttools-devel qt5-qtdeclarative-devel qt5-qtquickcontrols2-devel
 BuildRequires: kf5-kwindowsystem-devel
@@ -23,6 +24,8 @@ BuildRequires: fishui-devel
 BuildRequires: xorg-x11-drv-synaptics-devel
 BuildRequires: libX11-devel
 BuildRequires: kf5-kcoreaddons-devel
+BuildRequires: kf5-kio-devel
+BuildRequires: kf5-kidletime-devel
 BuildRequires: xorg-x11-server-devel
 Requires: pulseaudio-daemon
 Requires: fishui
@@ -68,6 +71,7 @@ popd
 %{_sysconfdir}/xdg/autostart/cutefish-polkit-agent.desktop
 %{_bindir}/cutefish-gmenuproxy
 %{_bindir}/cutefish-notificationd
+%{_bindir}/cutefish-sddm-helper
 /usr/lib/systemd/user/cutefish-gmenuproxy.service
 %{_datadir}/cutefish-notificationd/
 %{_datadir}/polkit-1/actions/com.cutefish*

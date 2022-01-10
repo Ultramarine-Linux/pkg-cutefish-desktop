@@ -31,17 +31,13 @@ System screen locker for Cutefish Desktop
 #%%setup -qn cutefishos-%%{component_name}-%%{git_refspec_short}
 
 %build
-%{set_build_flags}
-mkdir build
-pushd build
-cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
-make %{?_smp_mflags}
-popd
+%cmake
+%cmake_build
+
 
 %install
-pushd build
-%make_install
-popd
+%cmake_install
+
 
 %files
 %{_bindir}/%{name}

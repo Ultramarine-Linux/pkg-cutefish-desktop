@@ -14,7 +14,7 @@ BuildRequires: cmake
 BuildRequires: pkgconfig(xorg-libinput)
 BuildRequires: qt5-qtbase-devel qt5-qtdeclarative-devel qt5-qtquickcontrols2-devel qt5-linguist
 
-Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
+Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz#/%{component_name}-%{version}.tar.gz
 
 %description
 Cutefish Desktop Calculator

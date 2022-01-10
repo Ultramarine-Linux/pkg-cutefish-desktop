@@ -15,10 +15,8 @@ BuildRequires: cmake
 BuildRequires: extra-cmake-modules
 BuildRequires: qt5-qtbase-devel qt5-qtdeclarative-devel qt5-qtx11extras-devel cmake(Qt5UiTools)
 BuildRequires: kf5-kconfig-devel kf5-kguiaddons-devel kf5-kcoreaddons-devel kf5-kconfigwidgets-devel kf5-kwindowsystem-devel kf5-kwayland-devel
-BuildRequires: kdecoration-devel
-BuildRequires: kwin-devel = 5.22.5
+BuildRequires: kdecoration-devel kwin-devel xcb-util-devel
 BuildRequires: libepoxy-devel
-BuildRequires: xcb-util-devel
 
 Requires: kwin
 

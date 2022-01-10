@@ -5,7 +5,7 @@
 %define component_name statusbar
 
 Name: cutefish-%{component_name}
-Version: 0.5
+Version: 0.7
 Release: 1%{?dist}
 License: GPLv3
 Summary: Top status bar for Cutefish Desktop
@@ -27,17 +27,11 @@ The status bar at the top displays the current status of the system, such as tim
 %setup -qn %{component_name}-%{version}
 
 %build
-%{set_build_flags}
-mkdir build
-pushd build
-cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
-make %{?_smp_mflags}
-popd
+%cmake
+%cmake_build
 
 %install
-pushd build
-%make_install
-popd
+%cmake_install
 
 %files
 %{_bindir}/%{name}

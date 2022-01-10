@@ -5,7 +5,7 @@
 %define component_name settings
 
 Name: cutefish-%{component_name}
-Version: 0.5
+Version: 0.7
 Release: 1%{?dist}
 License: GPLv3
 Summary: System settings for Cutefish Desktop
@@ -39,17 +39,11 @@ patch src/background.cpp -i %{PATCH0}
 patch src/qml/About/Main.qml -i %{PATCH1}
 
 %build
-%{set_build_flags}
-mkdir build
-pushd build
-cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
-make %{?_smp_mflags}
-popd
+%cmake
+%cmake_build
 
 %install
-pushd build
-%make_install
-popd
+%cmake_install
 
 %files
 %{_bindir}/%{name}
